@@ -116,7 +116,8 @@ function matchCategoryFromQuery(t) {
     if (t.includes(lc)) return cat;
   }
   if (/\bтелевизор/.test(t) || /(^|\s)тв(\s|$)/.test(t) || /\bsmart[\s-]*tv\b/.test(t)) return "Телевизоры";
-  if (/акустик|колонк|саундбар|наушник|динамик|сабвуфер|музыкальн/.test(t)) return "Акустика";
+  if (/наушник|гарнитур|earbuds?|вкладыш|tws|airpods/i.test(t)) return "Аудио";
+  if (/акустик|колонк|саундбар|динамик|сабвуфер|музыкальн/i.test(t)) return "Акустика";
   return "";
 }
 
@@ -562,7 +563,9 @@ function itemMatchesSpecQuery(item, rawQuery, drawerCategory, drawerMinPrice, dr
   const screen = Number(item.screen);
 
   const skipRamStorage =
-    category === "Телевизоры" || category === "Акустика" || category === "Аудио";
+    drawerCategory === "Телевизоры" ||
+    drawerCategory === "Акустика" ||
+    drawerCategory === "Аудио";
 
   if (!skipRamStorage) {
     if (spec.ramExact != null && ram !== spec.ramExact) return false;
