@@ -1,152 +1,185 @@
 <!doctype html>
+
 <html lang="ru">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Подбор техники</title>
+
   <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
 </head>
+
 <body>
+
   <div class="bg-grid"></div>
+
   <header class="topbar">
+
     <div class="brand">
+
       <div class="brand-icon">AI</div>
+
       <div>
+
         <strong>Elequearo​</strong>
-        <p>Подбор электроники</p>
+
+        <p>Подбор электроники с Maxford LLM</p>
+
       </div>
+
     </div>
-    <button id="filtersToggleBtn" class="ghost-btn">Фильтры</button>
+
   </header>
 
+
+
   <main class="app-shell">
+
     <section class="hero">
+
       <p class="label">AI</p>
+
       <h1>Elequearo​</h1>
-      <p class="subtitle">Категории: ноутбуки, смартфоны, планшеты, телевизоры, акустика и др. Запрос понимает цену, ОЗУ, накопитель, экран. Импорт только добавляет товары; в карточке можно раскрыть ссылки на магазины.</p>
+
+      <p class="subtitle">Опишите любую технику. По умолчанию — 5 вариантов от бюджета до премиума; можно отфильтровать только нужный ценовой сегмент.</p>
+
+
 
       <div id="categoryChips" class="chips"></div>
 
-      <div class="workspace">
-        <div class="panel">
-          <span class="step">1</span>
-          <h2>Запрос</h2>
-          <textarea id="queryInput" rows="4" placeholder="Например: телевизор OLED 55&quot; до 100к, акустика JBL, ноутбук 16 ГБ ОЗУ"></textarea>
-          <div class="query-toolbar">
-            <button type="button" id="voiceQueryBtn" class="ghost-btn voice-btn" aria-pressed="false" title="Диктовать запрос (нужен микрофон)">Голосом</button>
-            <span id="voiceStatus" class="voice-status" aria-live="polite"></span>
-          </div>
-          <button id="pickBtn" class="primary-btn">Подобрать</button>
-        </div>
 
-        <div class="panel">
-          <span class="step">2</span>
-          <h2>Разбор</h2>
-          <div id="analysisBox" class="analysis">...</div>
-        </div>
 
-        <div class="panel">
-          <span class="step">3</span>
-          <h2>Результаты</h2>
-          <p id="resultCount" class="count">0 товаров</p>
-          <div id="cardsContainer" class="cards"></div>
-        </div>
+      <div class="popular-panel">
+
+        <p class="popular-title">Популярные запросы</p>
+
+        <div id="popularQueries" class="popular-queries"></div>
+
       </div>
+
+      <div class="segment-panel">
+        <p class="popular-title">Ценовой сегмент</p>
+        <p class="segment-hint">Не выбирайте — покажем 5 уровней цены. Или отметьте только бюджет, премиум и т.д.</p>
+        <div id="segmentFilters" class="segment-filters"></div>
+      </div>
+
+      <div class="workspace">
+
+        <div class="panel">
+
+          <span class="step">1</span>
+
+          <h2>Запрос</h2>
+
+          <textarea id="queryInput" rows="4" placeholder="Например: игровой ноутбук с RTX до 120 000 ₽"></textarea>
+
+          <div class="query-toolbar">
+
+            <button type="button" id="voiceQueryBtn" class="ghost-btn voice-btn" aria-pressed="false" title="Диктовать запрос">Голосом</button>
+
+            <span id="voiceStatus" class="voice-status" aria-live="polite"></span>
+
+          </div>
+
+          <button id="pickBtn" class="primary-btn">Подобрать</button>
+
+        </div>
+
+
+
+        <div class="panel">
+
+          <span class="step">2</span>
+
+          <h2>Разбор AI</h2>
+
+          <div id="analysisBox" class="analysis">Опишите запрос и нажмите «Подобрать».</div>
+
+        </div>
+
+
+
+        <div class="panel">
+
+          <span class="step">3</span>
+
+          <h2>Топ‑5 по сегментам</h2>
+
+          <p id="resultCount" class="count">0 товаров</p>
+
+          <div id="cardsContainer" class="cards"></div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="catalog-tools">
+
+        <button id="exportJsonBtn" type="button" class="ghost-btn">Экспорт JSON</button>
+
+      </div>
+
     </section>
+
   </main>
 
-  <aside id="filtersDrawer" class="drawer" aria-hidden="true">
-    <div class="drawer-head">
-      <h3>Фильтры каталога</h3>
-      <button id="closeDrawerBtn" class="ghost-btn">Закрыть</button>
-    </div>
 
-    <div class="control">
-      <label for="categoryFilter">Категория</label>
-      <select id="categoryFilter">
-        <option value="">Все</option>
-      </select>
-    </div>
-
-    <div class="control">
-      <p class="control-title">Бренд</p>
-      <div id="brandFilter" class="checkbox-group"></div>
-    </div>
-
-    <div class="control">
-      <p class="control-title">Цена, ₽</p>
-      <div class="range-row">
-        <input id="minPriceInput" type="number" min="0" placeholder="от">
-        <input id="maxPriceInput" type="number" min="0" placeholder="до">
-      </div>
-    </div>
-
-    <div id="ramStorageFilters">
-      <div class="control">
-        <p class="control-title">ОЗУ, ГБ</p>
-        <div id="ramFilter" class="checkbox-group"></div>
-      </div>
-
-      <div class="control">
-        <p class="control-title">Накопитель, ГБ</p>
-        <div id="storageFilter" class="checkbox-group"></div>
-      </div>
-    </div>
-
-    <div id="tvSpecFilters" class="hidden">
-      <div class="control">
-        <p class="control-title">Диагональ, дюймы</p>
-        <div id="screenFilter" class="checkbox-group"></div>
-      </div>
-      <div class="control">
-        <p class="control-title">Частота обновления, Гц</p>
-        <div id="refreshFilter" class="checkbox-group"></div>
-      </div>
-    </div>
-
-    <div id="audioSpecFilters" class="hidden">
-      <div class="control" id="audioWattsBlock">
-        <p class="control-title">Мощность, Вт</p>
-        <div id="audioWattsFilter" class="checkbox-group"></div>
-      </div>
-      <div class="control hidden" id="audioBatteryBlock">
-        <p class="control-title">Автономность, ч</p>
-        <div id="audioBatteryFilter" class="checkbox-group"></div>
-      </div>
-      <div class="control">
-        <p class="control-title">Особенности</p>
-        <div id="audioFeatureFilter" class="checkbox-group"></div>
-      </div>
-    </div>
-
-    <div class="toolbar">
-      <label class="file-add-label"><span class="file-add-text">Добавить в каталог (.xlsx / .json)</span>
-        <input id="excelInput" type="file" accept=".xlsx,.xls,.json">
-      </label>
-      <button id="exportJsonBtn" class="ghost-btn">Экспорт JSON</button>
-      <button id="resetFiltersBtn" class="ghost-btn danger">Сбросить</button>
-    </div>
-  </aside>
 
   <template id="cardTemplate">
+
     <article class="card">
-      <h3 class="card-title"></h3>
-      <p class="card-meta"></p>
-      <p class="card-specs"></p>
-      <p class="card-price"></p>
-      <div class="card-shops">
-        <button type="button" class="card-shops-toggle ghost-btn" aria-expanded="false">Магазины</button>
-        <div class="card-shops-panel" hidden>
-          <a class="card-shop-link" data-site="citilink" target="_blank" rel="noopener noreferrer">Ситилинк</a>
-          <a class="card-shop-link" data-site="dns" target="_blank" rel="noopener noreferrer">DNS</a>
-          <a class="card-shop-link" data-site="wildberries" target="_blank" rel="noopener noreferrer">Wildberries</a>
-          <a class="card-shop-link" data-site="ozon" target="_blank" rel="noopener noreferrer">Ozon</a>
-        </div>
+
+      <div class="card-head">
+
+        <span class="card-segment"></span>
+
+        <span class="card-rating"></span>
+
       </div>
+
+      <h3 class="card-title"></h3>
+
+      <p class="card-meta"></p>
+
+      <p class="card-reason"></p>
+
+      <p class="card-specs"></p>
+
+      <p class="card-price"></p>
+
+      <div class="card-shops">
+
+        <button type="button" class="card-shops-toggle ghost-btn" aria-expanded="false">Магазины</button>
+
+        <div class="card-shops-panel" hidden>
+
+          <a class="card-shop-link" data-site="citilink" target="_blank" rel="noopener noreferrer">Ситилинк</a>
+
+          <a class="card-shop-link" data-site="dns" target="_blank" rel="noopener noreferrer">DNS</a>
+
+          <a class="card-shop-link" data-site="wildberries" target="_blank" rel="noopener noreferrer">Wildberries</a>
+
+          <a class="card-shop-link" data-site="ozon" target="_blank" rel="noopener noreferrer">Ozon</a>
+
+        </div>
+
+      </div>
+
     </article>
+
   </template>
 
+
+
   <script src="app.js"></script>
+
 </body>
+
 </html>
+

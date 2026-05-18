@@ -4,6 +4,8 @@ import sqlite3
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse
 
+from llm_service import enrich_product, pick_products
+
 _ROOT = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(_ROOT, "electropick.db")
 
@@ -76,7 +78,9 @@ def _init_db_connection():
       description TEXT DEFAULT '',
       extras TEXT DEFAULT '',
       refresh_hz REAL DEFAULT 0,
-      audio_watts REAL DEFAULT 0
+      audio_watts REAL DEFAULT 0,
+      rating REAL DEFAULT 0,
+      review_count INTEGER DEFAULT 0
     )
     """
   )
@@ -87,6 +91,10 @@ def _init_db_connection():
     conn.execute("ALTER TABLE products ADD COLUMN refresh_hz REAL DEFAULT 0")
   if "audio_watts" not in cols:
     conn.execute("ALTER TABLE products ADD COLUMN audio_watts REAL DEFAULT 0")
+  if "rating" not in cols:
+    conn.execute("ALTER TABLE products ADD COLUMN rating REAL DEFAULT 0")
+  if "review_count" not in cols:
+    conn.execute("ALTER TABLE products ADD COLUMN review_count INTEGER DEFAULT 0")
   conn.commit()
   conn.close()
 
@@ -95,13 +103,13 @@ def get_products():
   conn = connect_db()
   rows = conn.execute(
     """
-    SELECT id, name, category, brand, price, ram, storage, cpu, screen, description, extras, refresh_hz, audio_watts
+    SELECT id, name, category, brand, price, ram, storage, cpu, screen, description, extras, refresh_hz, audio_watts, rating, review_count
     FROM products
     ORDER BY id ASC
     """
   ).fetchall()
   conn.close()
-  return [dict(row) for row in rows]
+  return [enrich_product(dict(row)) for row in rows]
 
 
 def replace_products(products):
@@ -109,8 +117,8 @@ def replace_products(products):
   conn.execute("DELETE FROM products")
   conn.executemany(
     """
-    INSERT INTO products (id, name, category, brand, price, ram, storage, cpu, screen, description, extras, refresh_hz, audio_watts)
-    VALUES (:id, :name, :category, :brand, :price, :ram, :storage, :cpu, :screen, :description, :extras, :refresh_hz, :audio_watts)
+    INSERT INTO products (id, name, category, brand, price, ram, storage, cpu, screen, description, extras, refresh_hz, audio_watts, rating, review_count)
+    VALUES (:id, :name, :category, :brand, :price, :ram, :storage, :cpu, :screen, :description, :extras, :refresh_hz, :audio_watts, :rating, :review_count)
     """,
     products
   )
@@ -144,6 +152,10 @@ def normalize_row(row, idx):
   audio_watts_raw = _first(
     row, "audio_watts", "мощность_ватт", "Мощность Вт", "ватт", "Вт RMS", "watts", "RMS"
   )
+  rating_raw = _first(row, "rating", "рейтинг", "Рейтинг", "оценка", "Оценка")
+  review_raw = _first(
+    row, "review_count", "reviews", "отзывы", "Отзывы", "число_отзывов", "количество отзывов"
+  )
   rid = _first(row, "id", "ID")
   try:
     pid = int(float(rid)) if rid not in (None, "") else idx + 1
@@ -169,7 +181,9 @@ def normalize_row(row, idx):
     "description": str(_first(row, "description", "описание", "Описание") or "").strip(),
     "extras": str(_first(row, "extras", "specs", "характеристики", "Характеристики") or "").strip(),
     "refresh_hz": float(refresh_raw or 0),
-    "audio_watts": float(audio_watts_raw or 0)
+    "audio_watts": float(audio_watts_raw or 0),
+    "rating": float(rating_raw or 0),
+    "review_count": int(float(review_raw or 0)) if review_raw not in (None, "") else 0,
   }
 
 
@@ -195,20 +209,34 @@ class ApiHandler(SimpleHTTPRequestHandler):
 
   def do_POST(self):
     path = urlparse(self.path).path
-    if path != "/api/products":
-      return self._send_json({"error": "Not found"}, status=404)
     try:
       length = int(self.headers.get("Content-Length", "0"))
       raw = self.rfile.read(length)
       payload = json.loads(raw.decode("utf-8") if raw else "{}")
+    except json.JSONDecodeError:
+      return self._send_json({"error": "Invalid JSON"}, status=400)
+
+    if path == "/api/pick":
+      try:
+        query = str(payload.get("query", "")).strip()
+        raw_segments = payload.get("segments")
+        seg_list = raw_segments if isinstance(raw_segments, list) else None
+        result = pick_products(query, get_products(), segments=seg_list)
+        status = 200 if result.get("ok") else 400
+        return self._send_json(result, status=status)
+      except Exception as error:
+        return self._send_json({"ok": False, "error": str(error), "items": []}, status=500)
+
+    if path != "/api/products":
+      return self._send_json({"error": "Not found"}, status=404)
+    try:
       products = payload.get("products", [])
       if not isinstance(products, list):
         return self._send_json({"error": "products must be an array"}, status=400)
       normalized = normalize_rows(products)
+      normalized = [enrich_product(row) for row in normalized]
       replace_products(normalized)
       return self._send_json({"ok": True, "count": len(normalized)})
-    except json.JSONDecodeError:
-      return self._send_json({"error": "Invalid JSON"}, status=400)
     except Exception as error:
       return self._send_json({"error": str(error)}, status=500)
 

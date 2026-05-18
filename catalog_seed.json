@@ -10,7 +10,9 @@
     "cpu": "Intel Core Ultra 7 155H",
     "screen": 14,
     "description": "OLED 3K 120 Гц, металл, 1.2 кг",
-    "extras": "Дисплей 3K OLED · Thunderbolt 4 · Wi‑Fi 6E"
+    "extras": "Дисплей 3K OLED · Thunderbolt 4 · Wi‑Fi 6E",
+    "rating": 4.7,
+    "review_count": 1461
   },
   {
     "id": 2,
@@ -23,7 +25,9 @@
     "cpu": "AMD Ryzen 5 7535U",
     "screen": 14,
     "description": "IPS FHD, MIL-STD, для офиса",
-    "extras": "IPS · dTPM 2.0 · 57 Вт·ч"
+    "extras": "IPS · dTPM 2.0 · 57 Вт·ч",
+    "rating": 3.8,
+    "review_count": 4620
   },
   {
     "id": 3,
@@ -36,7 +40,9 @@
     "cpu": "Intel Core 5 120U",
     "screen": 14,
     "description": "2.8K OLED, B&O Audio",
-    "extras": "OLED 2.8K 120 Гц · IR-камера"
+    "extras": "OLED 2.8K 120 Гц · IR-камера",
+    "rating": 4.3,
+    "review_count": 5006
   },
   {
     "id": 4,
@@ -49,7 +55,9 @@
     "cpu": "Apple M3",
     "screen": 13.6,
     "description": "Liquid Retina, безвентиляторный",
-    "extras": "8 GPU · MagSafe 3 · до 18 ч"
+    "extras": "8 GPU · MagSafe 3 · до 18 ч",
+    "rating": 4.7,
+    "review_count": 1311
   },
   {
     "id": 5,
@@ -62,7 +70,9 @@
     "cpu": "Intel Core i7-13620H",
     "screen": 15.6,
     "description": "RTX 4060 8 ГБ, игровой",
-    "extras": "144 Гц IPS · Cooler Boost 5"
+    "extras": "144 Гц IPS · Cooler Boost 5",
+    "rating": 4.9,
+    "review_count": 2467
   },
   {
     "id": 6,
@@ -75,7 +85,9 @@
     "cpu": "Intel Core Ultra 5 125H",
     "screen": 14,
     "description": "OLED 2.8K, лёгкий ультрабук",
-    "extras": "Intel Arc · Wi‑Fi 6E"
+    "extras": "Intel Arc · Wi‑Fi 6E",
+    "rating": 4.5,
+    "review_count": 3716
   },
   {
     "id": 7,
@@ -88,7 +100,9 @@
     "cpu": "Intel Core i5-12450H",
     "screen": 16,
     "description": "IPS FullView, металл",
-    "extras": "Полноразмерные порты · 60 Вт·ч"
+    "extras": "Полноразмерные порты · 60 Вт·ч",
+    "rating": 4.6,
+    "review_count": 1146
   },
   {
     "id": 8,
@@ -101,7 +115,9 @@
     "cpu": "Intel Core i5-1334U",
     "screen": 15.6,
     "description": "FHD IPS, числовой блок",
-    "extras": "SD-карта · серебристый корпус"
+    "extras": "SD-карта · серебристый корпус",
+    "rating": 4.5,
+    "review_count": 3153
   },
   {
     "id": 9,
@@ -114,7 +130,9 @@
     "cpu": "Intel Core 5 120U",
     "screen": 15.6,
     "description": "AMOLED дисплей, Galaxy-экосистема",
-    "extras": "Super AMOLED · AKG"
+    "extras": "Super AMOLED · AKG",
+    "rating": 4.4,
+    "review_count": 4528
   },
   {
     "id": 10,
@@ -127,7 +145,9 @@
     "cpu": "Intel Core i5-12450H",
     "screen": 16,
     "description": "IPS FullView, тонкий корпус",
-    "extras": "Metaline антенна · 70 Вт·ч"
+    "extras": "Metaline антенна · 70 Вт·ч",
+    "rating": 4.7,
+    "review_count": 1236
   },
   {
     "id": 11,
@@ -140,7 +160,9 @@
     "cpu": "Snapdragon 8 Gen 3",
     "screen": 6.8,
     "description": "S Pen, титановый корпус, 200 Мп",
-    "extras": "QHD+ Dynamic AMOLED 2X · IP68"
+    "extras": "QHD+ Dynamic AMOLED 2X · IP68",
+    "rating": 3.9,
+    "review_count": 2798
   },
   {
     "id": 12,
@@ -153,7 +175,9 @@
     "cpu": "Apple A17 Pro",
     "screen": 6.1,
     "description": "Титан, USB-C, Action Button",
-    "extras": "ProMotion 120 Гц · керамический щит"
+    "extras": "ProMotion 120 Гц · керамический щит",
+    "rating": 4.5,
+    "review_count": 3022
   },
   {
     "id": 13,
@@ -166,7 +190,9 @@
     "cpu": "Snapdragon 8 Gen 3",
     "screen": 6.73,
     "description": "Leica Summilux, 1\" сенсор",
-    "extras": "AMOLED 2K 120 Гц · IP68"
+    "extras": "AMOLED 2K 120 Гц · IP68",
+    "rating": 4.0,
+    "review_count": 4579
   },
   {
     "id": 14,
@@ -179,7 +205,9 @@
     "cpu": "Google Tensor G3",
     "screen": 6.7,
     "description": "Чистый Android, AI-фото",
-    "extras": "LTPO OLED · 7 лет обновлений"
+    "extras": "LTPO OLED · 7 лет обновлений",
+    "rating": 4.7,
+    "review_count": 5106
   },
   {
     "id": 15,
@@ -192,7 +220,9 @@
     "cpu": "Snapdragon 8 Gen 3",
     "screen": 6.82,
     "description": "100W зарядка, Hasselblad",
-    "extras": "2K ProXDR · 5400 мА·ч"
+    "extras": "2K ProXDR · 5400 мА·ч",
+    "rating": 4.4,
+    "review_count": 561
   },
   {
     "id": 16,
@@ -205,7 +235,9 @@
     "cpu": "MediaTek Dimensity 7200 Pro",
     "screen": 6.7,
     "description": "Glyph Interface, прозрачная спинка",
-    "extras": "AMOLED 120 Гц · 5000 мА·ч"
+    "extras": "AMOLED 120 Гц · 5000 мА·ч",
+    "rating": 4.9,
+    "review_count": 2941
   },
   {
     "id": 17,
@@ -218,7 +250,9 @@
     "cpu": "Snapdragon 8s Gen 3",
     "screen": 6.78,
     "description": "6000 нит пиковая яркость",
-    "extras": "8T LTPO · 120 Вт"
+    "extras": "8T LTPO · 120 Вт",
+    "rating": 4.7,
+    "review_count": 5093
   },
   {
     "id": 18,
@@ -231,7 +265,9 @@
     "cpu": "MediaTek Dimensity 9300",
     "screen": 6.78,
     "description": "Zeiss APO, телефото 100 мм",
-    "extras": "LTPO AMOLED · IP68"
+    "extras": "LTPO AMOLED · IP68",
+    "rating": 4.5,
+    "review_count": 3114
   },
   {
     "id": 19,
@@ -244,7 +280,9 @@
     "cpu": "Snapdragon 8 Gen 3",
     "screen": 6.82,
     "description": "Двойной перископ Zeiss",
-    "extras": "2K BOE X1 · 100 Вт"
+    "extras": "2K BOE X1 · 100 Вт",
+    "rating": 4.9,
+    "review_count": 929
   },
   {
     "id": 20,
@@ -257,7 +295,9 @@
     "cpu": "Snapdragon 8 Gen 3",
     "screen": 6.5,
     "description": "4K OLED 19.5:9, Alpha-технологии",
-    "extras": "без обрезки кадра · IP65/68"
+    "extras": "без обрезки кадра · IP65/68",
+    "rating": 4.3,
+    "review_count": 3332
   },
   {
     "id": 21,
@@ -270,7 +310,9 @@
     "cpu": "Apple M4",
     "screen": 11,
     "description": "Ultra Retina XDR, Apple Pencil Pro",
-    "extras": "Tandem OLED · ProRes"
+    "extras": "Tandem OLED · ProRes",
+    "rating": 4.5,
+    "review_count": 5048
   },
   {
     "id": 22,
@@ -283,7 +325,9 @@
     "cpu": "Snapdragon 8 Gen 2",
     "screen": 14.6,
     "description": "S Pen в комплекте, AMOLED",
-    "extras": "Dynamic AMOLED 2X · IP68"
+    "extras": "Dynamic AMOLED 2X · IP68",
+    "rating": 4.4,
+    "review_count": 4793
   },
   {
     "id": 23,
@@ -296,7 +340,9 @@
     "cpu": "Snapdragon 8 Gen 2",
     "screen": 12.4,
     "description": "144 Гц, 120 Вт зарядка",
-    "extras": "3K LCD · 10000 мА·ч"
+    "extras": "3K LCD · 10000 мА·ч",
+    "rating": 4.3,
+    "review_count": 489
   },
   {
     "id": 24,
@@ -309,7 +355,9 @@
     "cpu": "Snapdragon 870",
     "screen": 12.6,
     "description": "AMOLED, JBL четыре динамика",
-    "extras": "2.5K 120 Гц · стилус"
+    "extras": "2.5K 120 Гц · стилус",
+    "rating": 4.9,
+    "review_count": 2300
   },
   {
     "id": 25,
@@ -322,7 +370,9 @@
     "cpu": "Snapdragon 7 Gen 1",
     "screen": 11.5,
     "description": "Матовый экран для чтения",
-    "extras": "PaperMatte · HarmonyOS"
+    "extras": "PaperMatte · HarmonyOS",
+    "rating": 4.5,
+    "review_count": 3412
   },
   {
     "id": 26,
@@ -335,7 +385,9 @@
     "cpu": "Snapdragon 8s Gen 3",
     "screen": 12.3,
     "description": "OLED IMAX Enhanced",
-    "extras": "144 Гц · 8 динамиков"
+    "extras": "144 Гц · 8 динамиков",
+    "rating": 4.1,
+    "review_count": 3313
   },
   {
     "id": 27,
@@ -348,7 +400,9 @@
     "cpu": "Snapdragon X Elite",
     "screen": 13,
     "description": "Copilot+ PC, съёмная клавиатура",
-    "extras": "OLED 2880×1920"
+    "extras": "OLED 2880×1920",
+    "rating": 3.8,
+    "review_count": 4608
   },
   {
     "id": 28,
@@ -361,7 +415,9 @@
     "cpu": "MediaTek MT8188J",
     "screen": 11,
     "description": "Alexa, контент Prime Video",
-    "extras": "2K IPS · стерео"
+    "extras": "2K IPS · стерео",
+    "rating": 4.9,
+    "review_count": 2679
   },
   {
     "id": 29,
@@ -374,7 +430,9 @@
     "cpu": "Helio G99",
     "screen": 11.5,
     "description": "LTE-версия, Dolby Atmos",
-    "extras": "2K 120 Гц · 8360 мА·ч"
+    "extras": "2K 120 Гц · 8360 мА·ч",
+    "rating": 4.2,
+    "review_count": 2034
   },
   {
     "id": 30,
@@ -387,7 +445,9 @@
     "cpu": "Snapdragon 8 Gen 3",
     "screen": 12.1,
     "description": "144 Гц, клавиатура опционально",
-    "extras": "3K LCD · 9510 мА·ч"
+    "extras": "3K LCD · 9510 мА·ч",
+    "rating": 4.9,
+    "review_count": 2555
   },
   {
     "id": 31,
@@ -401,7 +461,9 @@
     "screen": 55,
     "description": "webOS 24, 4 HDMI 2.1",
     "extras": "OLED evo · Dolby Vision IQ · VRR",
-    "refresh_hz": 120
+    "refresh_hz": 120,
+    "rating": 4.3,
+    "review_count": 3402
   },
   {
     "id": 32,
@@ -415,7 +477,9 @@
     "screen": 65,
     "description": "Tizen, Anti-Glare",
     "extras": "Quantum Matrix · HDR10+ Adaptive",
-    "refresh_hz": 120
+    "refresh_hz": 120,
+    "rating": 3.9,
+    "review_count": 2626
   },
   {
     "id": 33,
@@ -429,7 +493,9 @@
     "screen": 55,
     "description": "Google TV, Acoustic Multi-Audio",
     "extras": "XR Clear Image · HDMI 2.1",
-    "refresh_hz": 120
+    "refresh_hz": 120,
+    "rating": 3.9,
+    "review_count": 2196
   },
   {
     "id": 34,
@@ -443,7 +509,9 @@
     "screen": 55,
     "description": "Google TV, Game Master Pro",
     "extras": "HDR10+ · Dolby Vision IQ",
-    "refresh_hz": 144
+    "refresh_hz": 144,
+    "rating": 4.0,
+    "review_count": 2187
   },
   {
     "id": 35,
@@ -457,7 +525,9 @@
     "screen": 65,
     "description": "VIDAA U7, IMAX Enhanced",
     "extras": "Full Array Local Dimming",
-    "refresh_hz": 144
+    "refresh_hz": 144,
+    "rating": 4.8,
+    "review_count": 3013
   },
   {
     "id": 36,
@@ -471,7 +541,9 @@
     "screen": 55,
     "description": "Android TV, 4-сторонний Ambilight",
     "extras": "Dolby Vision · DTS Play-Fi",
-    "refresh_hz": 120
+    "refresh_hz": 120,
+    "rating": 4.8,
+    "review_count": 3305
   },
   {
     "id": 37,
@@ -485,7 +557,9 @@
     "screen": 65,
     "description": "Google TV, MEMC",
     "extras": "Dolby Audio · HDR10+",
-    "refresh_hz": 120
+    "refresh_hz": 120,
+    "rating": 4.6,
+    "review_count": 1542
   },
   {
     "id": 38,
@@ -499,7 +573,9 @@
     "screen": 55,
     "description": "Google TV, ALLM",
     "extras": "1000+ зон подсветки",
-    "refresh_hz": 144
+    "refresh_hz": 144,
+    "rating": 4.2,
+    "review_count": 4603
   },
   {
     "id": 39,
@@ -513,7 +589,9 @@
     "screen": 50,
     "description": "Яндекс ТВ с Алисой",
     "extras": "HDR · Bluetooth 5.0",
-    "refresh_hz": 60
+    "refresh_hz": 60,
+    "rating": 4.8,
+    "review_count": 298
   },
   {
     "id": 40,
@@ -527,7 +605,9 @@
     "screen": 65,
     "description": "My Home Screen 8.0",
     "extras": "Dolby Vision IQ · Filmmaker Mode",
-    "refresh_hz": 120
+    "refresh_hz": 120,
+    "rating": 4.1,
+    "review_count": 4648
   },
   {
     "id": 41,
@@ -541,7 +621,9 @@
     "screen": 0,
     "description": "RGB-подсветка, IPX4 splash",
     "extras": "800 Вт · Bass Boost · микрофонный вход",
-    "audio_watts": 800
+    "audio_watts": 800,
+    "rating": 4.4,
+    "review_count": 981
   },
   {
     "id": 42,
@@ -555,7 +637,9 @@
     "screen": 0,
     "description": "HDMI eARC, Trueplay",
     "extras": "14 драйверов · Speech Enhancement",
-    "audio_watts": 120
+    "audio_watts": 120,
+    "rating": 3.9,
+    "review_count": 4738
   },
   {
     "id": 43,
@@ -569,7 +653,9 @@
     "screen": 0,
     "description": "ADAPTiQ, Wi‑Fi, Chromecast",
     "extras": "9 каналов · PhaseGuide",
-    "audio_watts": 90
+    "audio_watts": 90,
+    "rating": 4.5,
+    "review_count": 1386
   },
   {
     "id": 44,
@@ -583,7 +669,9 @@
     "screen": 0,
     "description": "MusicCast multi-room",
     "extras": "2-way · IPX3",
-    "audio_watts": 70
+    "audio_watts": 70,
+    "rating": 3.9,
+    "review_count": 1593
   },
   {
     "id": 45,
@@ -597,7 +685,9 @@
     "screen": 0,
     "description": "Bluetooth 5.2, RCA/AUX",
     "extras": "Динамики 5\" + две 3/4\"",
-    "audio_watts": 80
+    "audio_watts": 80,
+    "rating": 4.5,
+    "review_count": 804
   },
   {
     "id": 46,
@@ -611,7 +701,9 @@
     "screen": 0,
     "description": "Chromecast, AirPlay 2",
     "extras": "Dolby Atmos · Wi‑Fi",
-    "audio_watts": 280
+    "audio_watts": 280,
+    "rating": 4.0,
+    "review_count": 799
   },
   {
     "id": 47,
@@ -625,7 +717,9 @@
     "screen": 0,
     "description": "Q-Symphony, SpaceFit Sound Pro",
     "extras": "HDMI 2.1 · беспроводные тылы",
-    "audio_watts": 656
+    "audio_watts": 656,
+    "rating": 4.8,
+    "review_count": 1925
   },
   {
     "id": 48,
@@ -639,7 +733,9 @@
     "screen": 0,
     "description": "360 Spatial Sound Mapping",
     "extras": "8 HDMI passthrough · DSEE Extreme",
-    "audio_watts": 500
+    "audio_watts": 500,
+    "rating": 4.7,
+    "review_count": 946
   },
   {
     "id": 49,
@@ -653,7 +749,9 @@
     "screen": 0,
     "description": "Bluetooth 5.0, aptX HD",
     "extras": "Planar + 6.5\" алюминий",
-    "audio_watts": 256
+    "audio_watts": 256,
+    "rating": 4.4,
+    "review_count": 3988
   },
   {
     "id": 50,
@@ -667,7 +765,9 @@
     "screen": 0,
     "description": "Bluetooth, FM, USB/SD",
     "extras": "Сабвуфер 5\" · пульт ДУ",
-    "audio_watts": 36
+    "audio_watts": 36,
+    "rating": 3.8,
+    "review_count": 1128
   },
   {
     "id": 51,
@@ -680,7 +780,9 @@
     "cpu": "30 мм драйверы, LDAC, DSEE Extreme",
     "screen": 0,
     "description": "ANC, до 30 ч, быстрая зарядка",
-    "extras": "8 микрофонов · мультиточка"
+    "extras": "8 микрофонов · мультиточка",
+    "rating": 4.3,
+    "review_count": 1648
   },
   {
     "id": 52,
@@ -693,7 +795,9 @@
     "cpu": "H2 чип, Adaptive Audio",
     "screen": 0,
     "description": "ANC, пространственное аудио",
-    "extras": "MagSafe кейс · IP54"
+    "extras": "MagSafe кейс · IP54",
+    "rating": 3.9,
+    "review_count": 3045
   },
   {
     "id": 53,
@@ -706,7 +810,9 @@
     "cpu": "42 мм динамики, aptX Adaptive",
     "screen": 0,
     "description": "до 60 ч, ANC",
-    "extras": "Складная конструкция"
+    "extras": "Складная конструкция",
+    "rating": 3.9,
+    "review_count": 2667
   },
   {
     "id": 54,
@@ -719,7 +825,9 @@
     "cpu": "Snapdragon Sound, Immersive Audio",
     "screen": 0,
     "description": "ANC, стабилизация CustomTune",
-    "extras": "IPX4 · Bluetooth 5.3"
+    "extras": "IPX4 · Bluetooth 5.3",
+    "rating": 4.9,
+    "review_count": 4496
   },
   {
     "id": 55,
@@ -732,7 +840,9 @@
     "cpu": "10 мм драйверы, Personi-Fi 2.0",
     "screen": 0,
     "description": "ANC, кейс 1.45\" дисплей",
-    "extras": "8+30 ч · Qi"
+    "extras": "8+30 ч · Qi",
+    "rating": 4.7,
+    "review_count": 1262
   },
   {
     "id": 56,
@@ -745,7 +855,9 @@
     "cpu": "11.6 мм драйверы, LHDC 5.0",
     "screen": 0,
     "description": "ANC, ChatGPT интеграция",
-    "extras": "IP54 · 45 мА·ч ×2"
+    "extras": "IP54 · 45 мА·ч ×2",
+    "rating": 4.4,
+    "review_count": 1954
   },
   {
     "id": 57,
@@ -758,7 +870,9 @@
     "cpu": "45 мм драйверы, AAC/LDAC",
     "screen": 0,
     "description": "Студийный звук, до 50 ч",
-    "extras": "Складные амбушюры"
+    "extras": "Складные амбушюры",
+    "rating": 3.9,
+    "review_count": 2351
   },
   {
     "id": 58,
@@ -771,7 +885,9 @@
     "cpu": "40 мм двухэлементные драйверы",
     "screen": 0,
     "description": "ANC, USB-C Lossless",
-    "extras": "Apple/Android профили"
+    "extras": "Apple/Android профили",
+    "rating": 4.3,
+    "review_count": 3315
   },
   {
     "id": 59,
@@ -784,7 +900,9 @@
     "cpu": "Ultra-Hearing dual driver",
     "screen": 0,
     "description": "ANC 3.0, L2HC 3.0",
-    "extras": "IP54 · dual connection"
+    "extras": "IP54 · dual connection",
+    "rating": 4.4,
+    "review_count": 1700
   },
   {
     "id": 60,
@@ -797,7 +915,9 @@
     "cpu": "50 мм драйверы, Snapdragon Sound",
     "screen": 0,
     "description": "ANC, сменные амбушюры",
-    "extras": "BT 5.0 · 3.5 мм"
+    "extras": "BT 5.0 · 3.5 мм",
+    "rating": 4.5,
+    "review_count": 1915
   },
   {
     "id": 61,
@@ -810,7 +930,9 @@
     "cpu": "OLED 27\" QHD 240 Гц 0.03 мс",
     "screen": 27,
     "description": "DisplayHDR True Black 400, HDMI 2.1",
-    "extras": "AGLR · NVIDIA G-Sync Compatible"
+    "extras": "AGLR · NVIDIA G-Sync Compatible",
+    "rating": 4.6,
+    "review_count": 1875
   },
   {
     "id": 62,
@@ -823,7 +945,9 @@
     "cpu": "QD-OLED 32\" 4K 240 Гц",
     "screen": 32,
     "description": "Изогнутый 1800R, CoreLighting+",
-    "extras": "DisplayPort 2.1 · KVM"
+    "extras": "DisplayPort 2.1 · KVM",
+    "rating": 4.7,
+    "review_count": 4752
   },
   {
     "id": 63,
@@ -836,7 +960,9 @@
     "cpu": "Ada Lovelace 7168 CUDA, 12 ГБ GDDR6X",
     "screen": 0,
     "description": "3 вентилятора, ARGB",
-    "extras": "256-bit · PCIe 4.0"
+    "extras": "256-bit · PCIe 4.0",
+    "rating": 3.8,
+    "review_count": 4742
   },
   {
     "id": 64,
@@ -849,7 +975,9 @@
     "cpu": "8C/16T, 4.2–5.0 Гц, 96 МБ 3D V-Cache",
     "screen": 0,
     "description": "AM5, лучший игровой CPU",
-    "extras": "TDP 120 Вт · без кулера"
+    "extras": "TDP 120 Вт · без кулера",
+    "rating": 4.5,
+    "review_count": 1216
   },
   {
     "id": 65,
@@ -862,7 +990,9 @@
     "cpu": "14C (6P+8E), до 5.3 Гц",
     "screen": 0,
     "description": "LGA1700, без графики",
-    "extras": "125 Вт · для Z790/B760"
+    "extras": "125 Вт · для Z790/B760",
+    "rating": 4.0,
+    "review_count": 3202
   },
   {
     "id": 66,
@@ -875,7 +1005,9 @@
     "cpu": "PCIe 4.0, до 7450 МБ/с чтение",
     "screen": 0,
     "description": "M.2 2280, для PS5/ПК",
-    "extras": "TLC V-NAND · 5 лет гарантии"
+    "extras": "TLC V-NAND · 5 лет гарантии",
+    "rating": 4.4,
+    "review_count": 371
   },
   {
     "id": 67,
@@ -888,7 +1020,9 @@
     "cpu": "PCIe 4.0, до 7300 МБ/с",
     "screen": 0,
     "description": "Игровой NVMe с радиатором опция",
-    "extras": "nCache 4.0"
+    "extras": "nCache 4.0",
+    "rating": 4.9,
+    "review_count": 203
   },
   {
     "id": 68,
@@ -901,7 +1035,9 @@
     "cpu": "850 Вт 80+ Gold, ATX 3.0",
     "screen": 0,
     "description": "Полностью модульный, Cybenetics",
-    "extras": "12VHPWR в комплекте"
+    "extras": "12VHPWR в комплекте",
+    "rating": 4.1,
+    "review_count": 3739
   },
   {
     "id": 69,
@@ -914,7 +1050,9 @@
     "cpu": "Двухбашенный CPU-кулер 260 Вт TDP",
     "screen": 0,
     "description": "6 теплотрубок, 2×120 мм",
-    "extras": "Intel/AMD крепёж"
+    "extras": "Intel/AMD крепёж",
+    "rating": 3.9,
+    "review_count": 676
   },
   {
     "id": 70,
@@ -927,6 +1065,8 @@
     "cpu": "Midi Tower ATX, деревянная решётка",
     "screen": 0,
     "description": "3×140 мм Dynamic GP-14",
-    "extras": "USB-C фронт · 32 мм кабель-менеджмент"
+    "extras": "USB-C фронт · 32 мм кабель-менеджмент",
+    "rating": 4.9,
+    "review_count": 4661
   }
 ]
